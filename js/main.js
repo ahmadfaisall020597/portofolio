@@ -899,38 +899,84 @@
       })
     })
 
-    form.addEventListener('submit', e => {
+    const API_URL = 'https://portfolio-backend-8gs7.onrender.com'
+
+    form.addEventListener('submit', async e => {
       e.preventDefault()
+
       const inputs = $$('input, textarea', form)
       const ok = inputs.map(validate).every(Boolean)
 
       if (!ok) {
         note.textContent = 'Mohon perbaiki kolom yang ditandai merah.'
         note.className = 'form-note is-bad'
+
         $('.field.has-error input, .field.has-error textarea', form)?.focus()
+
         return
       }
 
       btn.classList.add('is-loading')
+      btn.disabled = true
+
       note.textContent = ''
       note.className = 'form-note'
 
-      // SIMULASI pengiriman.
-      // GANTI: hubungkan ke backend / Formspree / EmailJS di sini.
-      setTimeout(() => {
-        btn.classList.remove('is-loading')
+      const payload = {
+        name: $('#name', form).value.trim(),
+        email: $('#email', form).value.trim(),
+        subject: $('#subject', form).value.trim(),
+        message: $('#message', form).value.trim(),
+      }
+
+      try {
+        const response = await fetch(
+          `${API_URL}/api/v1/contact`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          }
+        )
+
+        const data = await response.json()
+
+        if (!response.ok) {
+          throw new Error(
+            data.message || 'Gagal mengirim pesan.'
+          )
+        }
+
         note.textContent =
           'Pesan terkirim! Terima kasih, saya akan segera membalas.'
+
         note.className = 'form-note is-ok'
+
         form.reset()
-        $$('.field', form).forEach(f =>
-          f.classList.remove('is-valid', 'has-error')
-        )
+
+        $$('.field', form).forEach(field => {
+          field.classList.remove('is-valid', 'has-error')
+        })
+
+      } catch (error) {
+        console.error('Contact API Error:', error)
+
+        note.textContent =
+          'Gagal mengirim pesan. Silakan coba lagi.'
+
+        note.className = 'form-note is-bad'
+
+      } finally {
+        btn.classList.remove('is-loading')
+        btn.disabled = false
+
         setTimeout(() => {
           note.textContent = ''
           note.className = 'form-note'
         }, 6000)
-      }, 1500)
+      }
     })
   }
 
