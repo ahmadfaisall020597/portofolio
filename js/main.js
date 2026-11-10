@@ -55,16 +55,16 @@
   // GANTI: daftar proyek kamu
   const PROJECTS = [
     {
-      title: 'AYO SRC - Principal Website',
+      title: 'Principal Website',
       cat: 'web',
       catLabel: 'Management System',
       year: '2022',
       featured: true,
       img: './public/images/principal.png',
-      alt: 'The AYO SRC Principal Web serves as the parent platform for the partner web portal and mobile application.',
+      alt: 'The Principal Web serves as the parent platform for the partner web portal and mobile application.',
       short:
         'Centralized web platform for managing partner portals, users, and operational data in real time.',
-      desc: 'The AYO SRC Principal Web serves as the core management platform for the entire AYO SRC ecosystem. It centralizes partner management, user administration, transaction monitoring, and operational reporting while integrating seamlessly with the partner web portal and mobile application. Developed using Agile Scrum, the platform is continuously enhanced through iterative sprints with new features, performance improvements, and system optimizations.',
+      desc: 'The Principal Web serves as the core management platform for the entire ecosystem. It centralizes partner management, user administration, transaction monitoring, and operational reporting while integrating seamlessly with the partner web portal and mobile application. Developed using Agile Scrum, the platform is continuously enhanced through iterative sprints with new features, performance improvements, and system optimizations.',
       stack: ['Laravel', 'Angular', 'TypeScript', 'MySql', 'Redis', 'Chart.js', 'scss', 'Aws', 'Docker', 'Jenkins', 'BitBucket', 'Jira'],
       role: 'Fullstack Developer',
       period: '2022 - Present',
@@ -74,7 +74,7 @@
       code: 'https://github.com'
     },
     {
-      title: 'AYO SRC - Mitra Website',
+      title: 'Mitra Website',
       cat: 'web',
       catLabel: 'E-Commerce',
       year: '2022',
@@ -82,7 +82,7 @@
       img: './public/images/mitra.png',
       alt: 'Halaman toko online di layar laptop',
       short:
-        'The AYO SRC Partner Website is a web portal designed for partner stores to manage products, inventory, promotions, and transactions. All partner accounts, permissions, and configurations are centrally managed through the AYO SRC Principal Web, ensuring secure data synchronization and consistent business operations across the ecosystem.',
+        'The Partner Website is a web portal designed for partner stores to manage products, inventory, promotions, and transactions. All partner accounts, permissions, and configurations are centrally managed through the Principal Web, ensuring secure data synchronization and consistent business operations across the ecosystem.',
       desc: 'Toko online modern dengan arsitektur headless: katalog dinamis, pencarian instan, keranjang persisten, dan checkout satu halaman terintegrasi Midtrans & Stripe. Optimasi gambar dan ISR membuat halaman produk tampil di bawah 1 detik.',
       stack: ['Laravel', 'Angular', 'TypeScript', 'MySql', 'Redis', 'Chart.js', 'scss', 'Aws', 'Docker', 'Jenkins', 'BitBucket', 'Jira', 'Figma'],
       role: 'Fullstack Developer',
@@ -93,16 +93,16 @@
       code: 'https://github.com'
     },
     {
-      title: 'AYO SRC - Mitra Order Mobile',
+      title: 'Mitra Order Mobile',
       cat: 'mobile',
       catLabel: 'B2B Ordering',
       year: '2023',
       featured: false,
       img: './public/images/amo.png',
-      alt: 'AYO SRC Mitra Order Mobile',
+      alt: 'Mitra Order Mobile',
       short:
         'Mobile application for partner stores to place direct orders, schedule pre-orders, and manage deliveries.',
-      desc: 'A mobile application that enables SRC partner stores to place direct orders, schedule pre-orders, and track delivery status from distributors. Fully integrated with the AYO SRC Principal platform, the app synchronizes product catalogs, pricing, promotions, and order data in real time, providing a seamless ordering experience for partner stores.',
+      desc: 'A mobile application that enables SRC partner stores to place direct orders, schedule pre-orders, and track delivery status from distributors. Fully integrated with the Principal platform, the app synchronizes product catalogs, pricing, promotions, and order data in real time, providing a seamless ordering experience for partner stores.',
       stack: ['Express.js', 'React Native', 'Firebase', 'Aws', 'Jenkins', 'Jira', 'BitBucket', 'Docker', 'Redis', 'Figma'],
       role: 'Fullstack Developer',
       period: '2023 - Present',
@@ -112,16 +112,16 @@
       code: 'https://github.com'
     },
     {
-      title: 'AYO SRC - Kasosyo Mobile',
+      title: 'Kasosyo Mobile',
       cat: 'mobile',
       catLabel: 'B2B Ordering',
       year: '2023',
       featured: true,
       img: './public/images/toko.png',
-      alt: 'AYO SRC Kasosyo Mobile',
+      alt: 'Kasosyo Mobile',
       short:
         'Mobile app for retailers to place orders, monitor order status, and receive promotions from partner stores.',
-      desc: 'A mobile application that enables retailers to place orders directly with SRC partner stores, monitor order progress, and receive personalized promotions. Orders submitted through the app are processed and managed by the AYO SRC Mitra Website, while product catalogs, pricing, and retailer data remain synchronized with the AYO SRC Principal platform.',
+      desc: 'A mobile application that enables retailers to place orders directly with SRC partner stores, monitor order progress, and receive personalized promotions. Orders submitted through the app are processed and managed by the Mitra Website, while product catalogs, pricing, and retailer data remain synchronized with the Principal platform.',
       stack: ['Laravel', 'React Native', 'TypeScript', 'MySql', 'Redis', 'Chart.js', 'scss', 'Figma', 'Aws', 'Docker', 'Jenkins', 'BitBucket', 'Jira'],
       role: 'Fullstack Developer',
       period: '2023 - Present',
@@ -131,16 +131,16 @@
       code: 'https://github.com'
     },
     {
-      title: 'AYO SRC - Kasir',
+      title: 'Kasir',
       cat: 'web',
       catLabel: 'B2B Ordering',
       year: '2023',
       featured: false,
       img: './public/images/kasir_ph.png',
-      alt: 'AYO SRC Kasir',
+      alt: 'Kasir',
       short:
         'Web-based cashier system for creating direct orders, managing transactions, and synchronizing sales data in real time.',
-      desc: 'A web-based cashier application that enables partner stores to create direct customer orders, process transactions, and manage daily sales operations. Fully integrated with the AYO SRC ecosystem, the system synchronizes product catalogs, pricing, inventory, and transaction data with the Principal platform, ensuring accurate reporting and seamless operational workflows.',
+      desc: 'A web-based cashier application that enables partner stores to create direct customer orders, process transactions, and manage daily sales operations. Fully integrated with the ecosystem, the system synchronizes product catalogs, pricing, inventory, and transaction data with the Principal platform, ensuring accurate reporting and seamless operational workflows.',
       stack: ['Laravel', 'Angular', 'TypeScript', 'MySql', 'Redis', 'Chart.js', 'scss', 'Aws', 'Docker', 'Jenkins', 'BitBucket', 'Jira', 'Figma'],
       role: 'Fullstack Developer',
       period: '2023 - Present',
